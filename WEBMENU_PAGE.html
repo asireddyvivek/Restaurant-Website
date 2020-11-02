@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="WEBMENU_PAGE.css">
+</head>
+
+<body>
+    <p id="top"></p>
+
+    <span id="OrderedItems" style=" width: 82%; height:75px; margin-left: 4px;">
+        Ordered Items:<p id="listOrder"></p>
+    </span>
+
+    <div id="bookBtn">
+        <button class="bookButton" onclick="costAlert()">Book Now<i class="fas fa-shopping-cart" style="padding-left: 3px;"></i>
+        </button>
+    </div>
+    <div class="f2" style="float: right; width: 1210px; margin-top: 70px;">
+
+        <ul type="none">
+            <div class="menuHeadings">
+                <h2 id="vegStarters">Starters - Veg</h2>
+            </div>
+
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title01">Baby Corn Manchurian</span><i class="far fa-dot-circle fa-xs"></i><span><button class="add" id="a01" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result01" value="0">
+                <button class="sub" id="s01" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price01">&#8377; 239</p>
+                <p class="item-description"><em>manchurian style baby corn in soya sauce ginger,chilli&garlic </em></p>
+            </li>
+
+
+            <li class="menuItem">
+                <h3 class="title">
+                    <span id="title02">Veg Manchurian</span>
+                    <i class="far fa-dot-circle fa-xs"></i> <span><button class="add" id="a02" onclick="add(this.id)">+</button>
+                    <input type="textbox" class="count" id="result02" value="0">
+                    <button class="sub" id="s02" onclick="sub(this.id)">-</button></span></h3>
+
+                <p id="price02">&#8377; 269</p>
+                <p class="item-description"><em>mixed diced vegetables chinese marinated sorted to palak paste </em></p>
+            </li>
+            <li class="menuItem">
+                <span><h3 class="title"><span id="title03"> Spring Rolls</span><i class="far fa-dot-circle fa-xs"></i><span><button class="add" id="a03" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result03" value="0">
+                <button class="sub" id="s03" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price03">&#8377; 239</p>
+                <p class="item-description"><em>spring roll wrappers wrapped with mixture of some vegetables and spices and sauces </em></p>
+            </li>
+
+            <li class="menuItem"><span><h3 class="title"><span id="title04"> Shanghai Rolls</span><i class="far fa-dot-circle fa-xs"></i><span><button class="add" id="a04" onclick="add(this.id)">+</button>
+            <input type="textbox" class="count" id="result04" value="0">
+            <button class="sub" id="s04" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price04">&#8377; 239</p>
+                <p class="item-description"><em>spring roll wrappers wrapped with mixture of some vegetables and sweet chilli sauce and some chinese sauces  </em></p>
+            </li>
+
+
+            <li class="menuItem">
+                <span><h3 class="title"><span id="title05">Chilli Mushroom</span><i class="far fa-dot-circle fa-xs"></i><span><button class="add" id="a05" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result05" value="0">
+                <button class="sub" id="s05" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price05">&#8377; 239</p>
+                <p class="item-description"><em>fresh mushroom ,onion ,capcicum & chineese sauces  </em></p>
+            </li>
+
+
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title06">Mushroom 65</span><i class="far fa-dot-circle fa-xs"></i><span><button class="add" id="a06" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result06" value="0">
+                <button class="sub" id="s06" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price06">&#8377; 239</p>
+                <p class="item-description"><em>manchurian style baby corn in soya sauce ginger,chilli&garlic </em></p>
+            </li>
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title07">Paneer 65</span><i class="far fa-dot-circle fa-xs"></i><span><button class="add" id="a07" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result07" value="0">
+                <button class="sub" id="s07" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price07">&#8377; 239</p>
+                <p class="item-description"><em>paneer deep fried and tossed with schezwan sauce and chinese sauces  </em></p>
+            </li>
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title08">Ginger Paneer</span><i class="far fa-dot-circle fa-xs"></i><span><button class="add" id="a08" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result08" value="0">
+                <button class="sub" id="s08" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price08">&#8377; 239</p>
+                <p class="item-description"><em>paneer deep fried and placed in ginger paste and some added chinese sauces  </em></p>
+            </li>
+
+            <div class="menuHeadings">
+                <h2 id="nonvegStarters">Starters - Non Veg</h2>
+            </div>
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title09">Chicken 65</span><i class="far fa-dot-circle fa-xs"></i><span><button class="add" id="a09" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result09" value="0">
+                <button class="sub" id="s09" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price09">&#8377; 239</p>
+                <p class="item-description"><em>paneer deep fried and placed in ginger paste and some added chinese sauces  </em></p>
+            </li>
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title10">Chicken Manchurian Dry</span><i class="far fa-dot-circle fa-xs"></i><span><button class="add" id="a10" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result10" value="0">
+                <button class="sub" id="s10" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price10"> &#8377; 239</p>
+                <p class="item-description"><em>paneer deep fried and placed in ginger paste and some added chinese sauces  </em></p>
+            </li>
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title11">Chicken Majestic</span><i class="far fa-dot-circle fa-xs"></i><span><button class="add" id="a11" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result11" value="0">
+                <button class="sub" id="s11" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price11"> &#8377; 239</p>
+                <p class="item-description"><em>paneer deep fried and placed in ginger paste and some added chinese sauces  </em></p>
+            </li>
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title12">Chilli Chicken</span><i class="far fa-dot-circle fa-xs"></i><span><button class="add" id="a12" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result12" value="0">
+                <button class="sub" id="s12" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price12"> &#8377; 239</p>
+                <p class="item-description"><em>paneer deep fried and placed in ginger paste and some added chinese sauces  </em></p>
+            </li>
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title13">Ginger Chicken</span><i class="far fa-dot-circle fa-xs"></i><span><button class="add" id="a13" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result13" value="0">
+                <button class="sub" id="s13" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price13"> &#8377; 239</p>
+                <p class="item-description"><em>paneer deep fried and placed in ginger paste and some added chinese sauces  </em></p>
+            </li>
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title14">Thai Chicken</span><i class="far fa-dot-circle fa-xs"></i><span><button class="add" id="a14" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result14" value="0">
+                <button class="sub" id="s14" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price14"> &#8377; 239</p>
+                <p class="item-description"><em>paneer deep fried and placed in ginger paste and some added chinese sauces  </em></p>
+            </li>
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title15">Chicken Lollipop</span><i class="far fa-dot-circle fa-xs"></i><span><button class="add" id="a15" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result15" value="0">
+                <button class="sub" id="s15" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price15"> &#8377; 239</p>
+                <p class="item-description"><em>paneer deep fried and placed in ginger paste and some added chinese sauces  </em></p>
+            </li>
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title16">Chilli Prawns</span><i class="far fa-dot-circle fa-xs"></i><span><button class="add" id="a16" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result16" value="0">
+                <button class="sub" id="s16" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price16"> &#8377; 239</p>
+                <p class="item-description"><em>paneer deep fried and placed in ginger paste and some added chinese sauces  </em></p>
+            </li>
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title17">Loose Prawns</span><i class="far fa-dot-circle fa-xs"></i><span><button class="add" id="a17" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result17" value="0">
+                <button class="sub" id="s17" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price17"> &#8377; 239</p>
+                <p class="item-description"><em>paneer deep fried and placed in ginger paste and some added chinese sauces  </em></p>
+            </li>
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title18">Apollo Fish</span><i class="far fa-dot-circle fa-xs"></i><span><button class="add" id="a18" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result18" value="0">
+                <button class="sub" id="s18" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price18"> &#8377; 239</p>
+                <p class="item-description"><em>paneer deep fried and placed in ginger paste and some added chinese sauces  </em></p>
+            </li>
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title19">Ginger Fish</span><i class="far fa-dot-circle fa-xs"></i><span><button class="add" id="a19" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result19" value="0">
+                <button class="sub" id="s19" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price19"> &#8377; 239</p>
+                <p class="item-description"><em>paneer deep fried and placed in ginger paste and some added chinese sauces  </em></p>
+            </li>
+
+            <div class="menuHeadings">
+                <h2 id="vegMainCourse">Veg - Main Course</h2>
+            </div>
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title20">Kadai Veg</span><i class="far fa-dot-circle fa-xs"></i><span><button class="add" id="a20" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result20" value="0">
+                <button class="sub" id="s20" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price20"> &#8377; 239</p>
+                <p class="item-description"><em>paneer deep fried and placed in ginger paste and some added chinese sauces  </em></p>
+            </li>
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title21">Kadai Paneer</span><i class="far fa-dot-circle fa-xs"></i><span><button class="add" id="a21" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result21" value="0">
+                <button class="sub" id="s21" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price21"> &#8377; 239</p>
+                <p class="item-description"><em>paneer deep fried and placed in ginger paste and some added chinese sauces  </em></p>
+            </li>
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title22">Paneer Tikka Masal</span><i class="far fa-dot-circle fa-xs"></i><span><button class="add" id="a22" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result22" value="0">
+                <button class="sub" id="s22" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price22"> &#8377; 239</p>
+                <p class="item-description"><em>paneer deep fried and placed in ginger paste and some added chinese sauces  </em></p>
+            </li>
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title23">Paneer Corn Burji</span><i class="far fa-dot-circle fa-xs"></i><span><button class="add" id="a23" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result23" value="0">
+                <button class="sub" id="s23" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price23"> &#8377; 239</p>
+                <p class="item-description"><em>paneer deep fried and placed in ginger paste and some added chinese sauces  </em></p>
+            </li>
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title24">Tomato Dal</span><i class="far fa-dot-circle fa-xs"></i><span><button class="add" id="a24" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result24" value="0">
+                <button class="sub" id="s24" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price24"> &#8377; 239</p>
+                <p class="item-description"><em>paneer deep fried and placed in ginger paste and some added chinese sauces  </em></p>
+            </li>
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title25">Mehti Dal</span><i class="far fa-dot-circle fa-xs"></i><span><button class="add" id="a25" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result25" value="0" disabled>
+                <button class="sub" id="s25" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price25"> &#8377; 239</p>
+                <p class="item-description"><em>paneer deep fried and placed in ginger paste and some added chinese sauces  </em></p>
+            </li>
+
+            <div class="menuHeadings">
+                <h2 id="nonvegMainCourse">NonVeg - Main Course</h2>
+            </div>
+
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title26">Masala Chicken</span><i class="far fa-dot-circle fa-xs"></i><span><button class="add" id="a26" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result26" value="0" disabled>
+                <button class="sub" id="s26" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price26"> &#8377; 239</p>
+                <p class="item-description"><em>paneer deep fried and placed in ginger paste and some added chinese sauces  </em></p>
+            </li>
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title27">Kadhai Chicken</span><i class="far fa-dot-circle fa-xs"></i><span><button class="add" id="a27" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result27" value="0" disabled>
+                <button class="sub" id="s27" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price27"> &#8377; 239</p>
+                <p class="item-description"><em>paneer deep fried and placed in ginger paste and some added chinese sauces  </em></p>
+            </li>
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title28">Gongura Chicken</span><i class="far fa-dot-circle fa-xs"></i><span><button class="add" id="a28" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result28" value="0" disabled>
+                <button class="sub" id="s28" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price28"> &#8377; 239</p>
+                <p class="item-description"><em>paneer deep fried and placed in ginger paste and some added chinese sauces  </em></p>
+            </li>
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title29">Butter Chicken</span><i class="far fa-dot-circle fa-xs"></i><span><button class="add" id="a29" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result29" value="0" disabled>
+                <button class="sub" id="s29" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price29"> &#8377; 239</p>
+                <p class="item-description"><em>paneer deep fried and placed in ginger paste and some added chinese sauces  </em></p>
+            </li>
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title30">Chicken Tikka Masala</span><i class="far fa-dot-circle fa-xs"></i><span><button class="add" id="a30" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result30" value="0" disabled>
+                <button class="sub" id="s30" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price30"> &#8377; 239</p>
+                <p class="item-description"><em>paneer deep fried and placed in ginger paste and some added chinese sauces  </em></p>
+            </li>
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title31">Chicken Tikka Masala</span><i class="far fa-dot-circle fa-xs"></i><span><button class="add" id="a31" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result31" value="0" disabled>
+                <button class="sub" id="s31" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price31"> &#8377; 239</p>
+                <p class="item-description"><em>paneer deep fried and placed in ginger paste and some added chinese sauces  </em></p>
+            </li>
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title32">Mutton Keema Masala</span><i class="far fa-dot-circle fa-xs"></i><span><button class="add" id="a32" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result32" value="0" disabled>
+                <button class="sub" id="s32" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price32"> &#8377; 239</p>
+                <p class="item-description"><em>paneer deep fried and placed in ginger paste and some added chinese sauces  </em></p>
+            </li>
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title33">Prawns Curry</span><i class="far fa-dot-circle fa-xs"></i><span><button class="add" id="a33" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result33" value="0" disabled>
+                <button class="sub" id="s33" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price33"> &#8377; 239</p>
+                <p class="item-description"><em>paneer deep fried and placed in ginger paste and some added chinese sauces  </em></p>
+            </li>
+
+
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title34">Egg Burji</span><i class="far fa-dot-circle fa-xs"></i><span><button class="add" id="a34" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result34" value="0" disabled>
+                <button class="sub" id="s34" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price34"> &#8377; 239</p>
+                <p class="item-description"><em>paneer deep fried and placed in ginger paste and some added chinese sauces  </em></p>
+            </li>
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title35">Egg Masala</span><i class="far fa-dot-circle fa-xs"></i><span><button class="add" id="a35" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result35" value="0" disabled>
+                <button class="sub" id="s35" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price35"> &#8377; 239</p>
+                <p class="item-description"><em>paneer deep fried and placed in ginger paste and some added chinese sauces  </em></p>
+            </li>
+
+            <div class="menuHeadings">
+                <h2 id="pastries">Cakes / Pastries</h2>
+            </div>
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title36">Black Forest Cake</span><i class="far fa-dot-circle fa-xs"></i><span><button class="add" id="a36" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result36" value="0" disabled>
+                <button class="sub" id="s36" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price36"> &#8377; 499</p>
+                <p class="item-description"><em>paneer deep fried and placed in ginger paste and some added chinese sauces  </em></p>
+            </li>
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title37">Delicious Butterscotch Cake</span><i class="far fa-dot-circle fa-xs"></i><span><button class="add" id="a37" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result37" value="0" disabled>
+                <button class="sub" id="s37" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price37"> &#8377; 549</p>
+                <p class="item-description"><em>paneer deep fried and placed in ginger paste and some added chinese sauces  </em></p>
+            </li>
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title38">Red Velvet Cake</span><i class="far fa-dot-circle fa-xs"></i><span><button class="add" id="a38" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result38" value="0" disabled>
+                <button class="sub" id="s38" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price38"> &#8377; 799</p>
+                <p class="item-description"><em>paneer deep fried and placed in ginger paste and some added chinese sauces  </em></p>
+            </li>
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title39">Fudge Brownie Cake</span><i class="far fa-dot-circle fa-xs"></i><span><button class="add" id="a39" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result39" value="0" disabled>
+                <button class="sub" id="s39" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price39"> &#8377; 649</p>
+                <p class="item-description"><em>paneer deep fried and placed in ginger paste and some added chinese sauces  </em></p>
+            </li>
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title40">Chocolate Flakes Cake</span><i class="far fa-dot-circle fa-xs"></i><span><button class="add" id="a40" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result40" value="0" disabled>
+                <button class="sub" id="s40" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price40"> &#8377; 239</p>
+                <p class="item-description"><em>paneer deep fried and placed in ginger paste and some added chinese sauces  </em></p>
+            </li>
+            <div class="menuHeadings">
+                <h2 id="iceCreams">Ice - Creams</h2>
+            </div>
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title41">Vanilla</span><i class="far fa-dot-circle fa-xs"></i><span><button class="add" id="a41" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result41" value="0" disabled>
+                <button class="sub" id="s41" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price41"> &#8377; 109</p>
+                <p class="item-description"><em>paneer deep fried and placed in ginger paste and some added chinese sauces  </em></p>
+            </li>
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title42">Chocolate</span><i class="far fa-dot-circle fa-xs"></i><span><button class="add" id="a42" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result42" value="0" disabled>
+                <button class="sub" id="s42" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price42"> &#8377; 109</p>
+                <p class="item-description"><em>paneer deep fried and placed in ginger paste and some added chinese sauces  </em></p>
+            </li>
+
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title43">ButterScotch</span><i class="far fa-dot-circle fa-xs"></i><span><button class="add" id="a43" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result43" value="0" disabled>
+                <button class="sub" id="s43" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price43"> &#8377; 109</p>
+                <p class="item-description"><em>paneer deep fried and placed in ginger paste and some added chinese sauces  </em></p>
+            </li>
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title44">Mango</span><i class="far fa-dot-circle fa-xs"></i><span><button class="add" id="a44" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result44" value="0" disabled>
+                <button class="sub" id="s44" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price44"> &#8377; 109</p>
+                <p class="item-description"><em>paneer deep fried and placed in ginger paste and some added chinese sauces  </em></p>
+            </li>
+
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title45">Strawberry</span><i class="far fa-dot-circle fa-xs"></i><span><button class="add" id="a45" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result45" value="0" disabled>
+                <button class="sub" id="s45" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price45"> &#8377; 109</p>
+                <p class="item-description"><em>paneer deep fried and placed in ginger paste and some added chinese sauces  </em></p>
+            </li>
+            <li class="menuItem">
+                <span><h3 class="title" ><span id="title46">Green Pista</span><i class="far fa-dot-circle fa-xs"></i><span><button class="add" id="a46" onclick="add(this.id)">+</button>
+                <input type="textbox" class="count" id="result46" value="0" disabled>
+                <button class="sub" id="s46" onclick="sub(this.id)">-</button></span></h3>
+                </span>
+                <p id="price46"> &#8377; 109</p>
+                <p class="item-description"><em>paneer deep fried and placed in ginger paste and some added chinese sauces  </em></p>
+            </li>
+        </ul>
+        <div id="empty" style="display: none;">&#128528;</div>
+        <div id="bike" style="display: none;">&#128757</div>
+        <div id="confirmed" style="display: none;">&#10004;</div>
+
+        <script>
+            var finalValue = 0;
+            var cost = 0;
+            var finalCost = 0;
+            var list = new Array();
+            var cost = new Array();
+
+            function costAlert() {
+                if (finalCost <= 0) {
+                    var emoji = document.getElementById("empty").innerHTML;
+
+                    alert("Your cart is empty.." + emoji);
+                } else {
+
+                    if (confirm("Total Cost:" + finalCost + "\nDo you want to confirm the booking?")) {
+                        var emoji1 = document.getElementById("confirmed").innerHTML;
+                        var emoji2 = document.getElementById("bike").innerHTML;
+                        alert("Order Confirmed" + emoji1 + "\n We will get to you........." + emoji2);
+                        location.reload();
+                    }
+
+                }
+            }
+
+
+            function add(clicked_id) {
+
+                var des_id = "result" + clicked_id[clicked_id.length - 2] + "" + clicked_id[clicked_id.length - 1];
+                //alert(des_id);
+                rvalue = document.getElementById(des_id).value;
+                rvalue++;
+
+                document.getElementById(des_id).value = rvalue;
+                finalValue++;
+
+                document.getElementById("finalBowl").value = finalValue;
+                var id = "title" + clicked_id[clicked_id.length - 2] + "" + clicked_id[clicked_id.length - 1];
+                var item = document.getElementById(id).innerHTML;
+
+                list.splice(2, 0, item);
+
+
+
+
+                var cid = "price" + clicked_id[clicked_id.length - 2] + "" + clicked_id[clicked_id.length - 1];
+                cid = document.getElementById(cid).innerText;
+                cid = cid.substr(2, 5);
+                cost.splice(1, 0, cid);
+
+                /*            dlist = list.sort();
+                            for (var i = 0; i < dlist.length; i++) {
+                                if (i < dlist.length - 1) {
+                                    if (dlist[i] == dlist[i + 1]) {
+                                        delete dlist[i];
+                                    }
+                                }
+
+                            }
+                            alert(dlist);*/
+
+                document.getElementById("listOrder").innerText = list;
+                finalCost += Number(cid);
+
+                //document.getElementById("costOrder").innerHTML = finalCost;
+            }
+
+
+            function sub(clicked_id) {
+                var des_id = "result" + clicked_id[clicked_id.length - 2] + "" + clicked_id[clicked_id.length - 1];
+                var rvalue = document.getElementById(des_id).value;
+                rvalue--;
+                if (rvalue < 0 || finalValue < 0) {
+                    rvalue = 0;
+                    //finalValue = 0;
+                } else if (rvalue >= 0) {
+
+                    finalValue--;
+
+
+                    document.getElementById(des_id).value = rvalue;
+
+                    document.getElementById("finalBowl").value = finalValue;
+
+                    var id = "title" + clicked_id[clicked_id.length - 2] + "" + clicked_id[clicked_id.length - 1];
+                    var item = document.getElementById(id).innerHTML;
+                    var index = list.indexOf(item);
+                    list.splice(index, 1);
+                    document.getElementById("listOrder").innerHTML = list;
+
+
+
+                    var cid = "price" + clicked_id[clicked_id.length - 2] + "" + clicked_id[clicked_id.length - 1];
+                    cid = document.getElementById(cid).innerText;
+                    cid = cid.substr(2, 5);
+                    var citem = cost.indexOf(cid);
+                    cost.splice(citem, 1);
+
+
+                    finalCost -= Number(cid);
+                    // document.getElementById("costOrder").innerHTML = finalCost;
+                }
+            }
+        </script>
+        <div class="final">
+            <button class="cartButton" id="cartButton"><i class="fas fa-concierge-bell fa-lg"></i></button>
+            <input type="text" id="finalBowl" value="0" disabled>
+        </div>
+    </div>
+
+
+    <div class="f1" style="height: 500px; width: 308px; float: left; margin-top: 70px;">
+        <h2 id="category" class="menuHeadings">Categories</h2>
+        <button class="categoryItem" onclick="location.href='#vegStarters'">Veg-Starters</button>
+        <button class="categoryItem" onclick="location.href='#nonvegStarters'">Non-VegStarters</button>
+        <button class="categoryItem" onclick="location.href='#vegMainCourse'">Veg-Main Course</button>
+        <button class="categoryItem" onclick="location.href='#nonvegMainCourse'">NonVeg-Main Course</button>
+        <button class="categoryItem" onclick="location.href='#iceCreams'">Ice-Cream</button>
+        <button class="categoryItem" onclick="location.href='#pastries'">Cakes / Pastries</button>
+
+
+
+    </div>
+    <button id="pageReset" onclick="location.href='#top'"><i class="fas fa-arrow-circle-up"></i></button>
+
+
+</body>
+
+</html>
