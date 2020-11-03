@@ -5,6 +5,170 @@
     object-fit: cover;
 }
 
+.footerBtn {
+    text-transform: capitalize;
+    border-radius: 5px;
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+.footerBtn:hover {
+    background-color: yellowgreen;
+    transform: scale(1.5, 1.5);
+    transition: 0.2s;
+}
+
+.span1 {
+    float: left;
+    margin-right: 150px;
+    margin-left: 50px;
+    justify-content: center;
+}
+
+.tb1 {
+    border: 1px solid beige;
+    border-radius: 2px;
+    margin: 20px 30px;
+    width: 300px;
+    height: 30px;
+}
+
+.footerBtn {
+    margin: 20px 130px;
+}
+
+#timingsTable,
+#timingsHead,
+#timingsData {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+#timingsTable {
+    cursor: default;
+    width: 300px;
+}
+
+#timingsHead {
+    background-color: black;
+}
+
+#timingsRow:nth-child(even) {
+    background-color: rgba(128, 128, 128, 0.795);
+}
+
+#timingsRow:nth-child(odd) {
+    background-color: rgba(173, 216, 230, 0.836);
+}
+
+#timingsHead,
+#timingsData {
+    padding: 10px;
+}
+
+.footer1 {
+    float: left;
+    width: 30%;
+    margin: 10px 10px;
+}
+
+.footer2 {
+    float: left;
+    width: 30%;
+    margin: 10px 60px;
+}
+
+.footer3 {
+    color: #ffffff;
+    float: left;
+    width: 30%;
+    margin: 10px 0px;
+}
+
+.footer4 {
+    margin: 20px 500px;
+    float: left;
+}
+
+footer {
+    margin: 10px;
+    background-image: url('https://wallpaperaccess.com/full/767033.jpg');
+    background-repeat: no-repeat;
+    background-blend-mode: screen;
+    background-size: cover;
+    background-color: rgb(29, 29, 29);
+    height: 500px;
+    border-radius: 10px;
+    color: #ffffff;
+}
+
+#mapIcon {
+    float: left;
+    width: 30px;
+    margin: 10px 0px;
+    color: #ffffff;
+}
+
+#map {
+    float: left;
+    margin: 10px 0px;
+    color: aliceblue;
+}
+
+.heroText1 {
+    background-color: #717171a8;
+    padding: 50px;
+    font-size: 30px;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+.heroText2 {
+    font-size: 30px;
+    text-align: center;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(250, 214, 9);
+}
+
+.heroText {
+    font-size: 30px;
+    text-align: center;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+}
+
+.heroText22 {
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+.imgs {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+}
+
 li,
 a,
 button {
@@ -17,6 +181,7 @@ body {
 
 header {
     display: flex;
+    position: -webkit-sticky;
     justify-content: space-between;
     align-items: center;
     padding: 0px 30px 5px 30px;
@@ -120,18 +285,55 @@ header {
     background-color: cyan;
 }
 
-
-/*#SLIDER*/
-
-* {}
-
-
-/* Slideshow container */
-
 .slideshow-container {
     width: 1500px;
     position: relative;
     margin: auto;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    padding: 10px;
+}
+
+.grid-item {
+    padding: 10px;
+    justify-content: center;
+    width: 20%;
+    height: 20%;
+}
+
+.menuImg {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.menuHeading {
+    position: absolute;
+    bottom: -60%;
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0.3);
+    width: 300px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.grid-item:hover {
+    cursor: pointer;
+}
+
+.grid-item:hover .menuHeading {
+    width: 310px;
+    transition: 1.2s;
+}
+
+.grid-item:hover .menuImg {
+    width: 310px;
+    height: 310px;
+    transition: 1.2s;
 }
 
 
@@ -229,110 +431,4 @@ header {
     to {
         opacity: 1
     }
-}
-
-.footerBtn {
-    text-transform: capitalize;
-    border-radius: 5px;
-    border: 1px solid white;
-    cursor: pointer;
-}
-
-.footerBtn:hover {
-    background-color: yellowgreen;
-    transform: scale(1.5, 1.5);
-    transition: 0.2s;
-}
-
-.span1 {
-    float: left;
-    margin-right: 150px;
-    margin-left: 50px;
-    justify-content: center;
-}
-
-.tb1 {
-    border: 1px solid beige;
-    border-radius: 2px;
-    margin: 20px 30px;
-    width: 300px;
-    height: 30px;
-}
-
-.footerBtn {
-    margin: 20px 130px;
-}
-
-#timingsTable,
-#timingsHead,
-#timingsData {
-    border: 1px solid black;
-    border-collapse: collapse;
-}
-
-#timingsTable {
-    cursor: default;
-    width: 300px;
-}
-
-#timingsHead {
-    background-color: black;
-}
-
-#timingsRow:nth-child(even) {
-    background-color: rgba(128, 128, 128, 0.795);
-}
-
-#timingsRow:nth-child(odd) {
-    background-color: rgba(173, 216, 230, 0.836);
-}
-
-#timingsHead,
-#timingsData {
-    padding: 10px;
-}
-
-.footer1 {
-    float: left;
-    width: 30%;
-    margin: 10px 10px;
-}
-
-.footer2 {
-    float: left;
-    width: 30%;
-    margin: 10px 60px;
-}
-
-.footer3 {
-    color: #ffffff;
-    float: left;
-    width: 30%;
-    margin: 10px 0px;
-}
-
-.footer4 {
-    margin: 20px 500px;
-    float: left;
-}
-
-foot {
-    margin: 10px;
-    background-color: rgb(29, 29, 29);
-    height: 500px;
-    border-radius: 10px;
-    color: #ffffff;
-}
-
-#mapIcon {
-    float: left;
-    width: 30px;
-    margin: 10px 0px;
-    color: #ffffff;
-}
-
-#map {
-    float: left;
-    margin: 10px 0px;
-    color: aliceblue;
 }

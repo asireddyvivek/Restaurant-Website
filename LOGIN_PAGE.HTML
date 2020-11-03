@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Feedback form</title>
+    <link rel="stylesheet" href="LOGIN_PAGE.css">
+    <script src="loginDetails.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="return">
+            <a style="text-decoration: none;" href="HOME_PAGE.html" target="_self"><span>&#8592</span>Return to home page</a>
+        </div>
+        <div class="form-model">
+            <div class="flex-container">
+                <label class="heading">We want to hear from you!</label>
+                <form class="form-list">
+                    <input type="text" class="winInput" placeholder="Email Address" id="userlog">
+                    <input type="text" class="winInput" placeholder="Password" id="passlog">
+                    <span><input type="checkbox">Remember Me</span>
+
+
+                    <div class="button-section">
+                        <button class="btn" type="submit" onclick="verifyUser()">LOG IN</button>
+                    </div>
+
+                    <span><p class="forgot" style="float: left; margin-top: 25px;" onclick="forgot()">Forgot Password?</p>
+                        <p class="register" onclick="location.href='SIGNUP_PAGE.html'" style="float: right; padding: 0; margin-top: 25px;">NewUser? Register</p></span>
+                </form>
+
+            </div>
+        </div>
+
+    </div>
+    <script>
+        function forgot() {
+            var a = prompt("Enter your registered mobile number:");
+            if (a != null && a.length == 10 && !(NUmber.isNaN(a))) {
+                alert("A link is sent to your mobile through SMS to reset the password");
+
+            } else {
+                alert("Please provide valid mobile number");
+            }
+        }
+    </script>
+</body>
+
+</html>
