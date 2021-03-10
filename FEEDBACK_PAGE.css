@@ -3,6 +3,8 @@ body {
     margin: 0px;
     border: 0;
     box-sizing: border-box;
+    background-image:  url('PICS/feedback.jpg');
+    object-fit: contain;
 }
 
 .link {
@@ -34,7 +36,7 @@ body {
     border-radius: 10px;
     padding: 2px;
     width: 24%;
-    background-color: rgba(189, 13, 212, 0.616);
+    background-color: rgba(93, 163, 196, 0.616);
     outline: 0;
 }
 
@@ -44,7 +46,7 @@ body {
     padding: 20px;
     width: auto;
     height: auto;
-    background-color: rgba(189, 13, 212, 0.616);
+    background-color: rgba(110, 133, 236, 0.616);
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.8);
     margin: auto;
